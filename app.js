@@ -32,15 +32,15 @@ app.get('/user/*',(req, res)=>{
         catch (e) { }
     })
     .then(()=>{
-        res.send(JSON.stringify(dataTikTokUser))
+        res.json(JSON.stringify(dataTikTokUser))
         console.log(JSON.stringify(dataTikTokUser))
     })
     .catch ((e)=>{
-        res.json(e.message)
+        res.send(e.message)
     })
 })
 
-app.listen(3000,()=>{
+app.listen(80,()=>{
 
 })
 
