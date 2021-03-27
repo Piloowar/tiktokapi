@@ -41,6 +41,6 @@ app.get('/user/*',(req, res)=>{
 })
 
 app.listen(443,()=>{
-
+    console.log('Server started')
 })
 
