@@ -18,6 +18,8 @@ const message = {
     error:''
 }
 
+const PORT = process.env.PORT || 3000
+
 app.get('/user/*',(req, res)=>{
     dataTikTokUser.UserName = req.params[0]
     axios.get(url + dataTikTokUser.UserName).then ((res)=>{
@@ -40,7 +42,7 @@ app.get('/user/*',(req, res)=>{
     })
 })
 
-app.listen(443,()=>{
-    console.log('Server started')
+app.listen(PORT,()=>{
+    console.log('Server started ', PORT)
 })
 
