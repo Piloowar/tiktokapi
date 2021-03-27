@@ -36,7 +36,7 @@ app.get('/user/*',(req, res)=>{
         console.log(JSON.stringify(dataTikTokUser))
     })
     .catch ((e)=>{
-        res.send(e.message)
+        res.json(e.message)
     })
 })
 
